@@ -3,14 +3,14 @@
   <table>
     <tr>
       <td>Department Id</td>
-      <td><input type="text" placeholder="Enter Department Id" [(ngModel)]="Department.departmentId"/></td>
+      <td><input type="text" placeholder="Enter Department Id" [(ngModel)]="department.departmentId"/></td>
     </tr>
     <tr>
       <td>Department Name</td>
-      <td><input type="password" placeholder="Enter Department Name" [(ngModel)]="Department.departmentName"/></td>
+      <td><input type="text" placeholder="Enter Department Name" [(ngModel)]="department.departmentName"/></td>
     </tr>
     <tr>
-      <td colspan="2"><input type="submit" value="Register" id="tbbtn"  (click)="addDepartment(Department)"></td>
+      <td colspan="2"><input type="submit" value="Register" id="tbbtn"  (click)="addDepartment(department)"></td>
     </tr>
   </table>
   </div>

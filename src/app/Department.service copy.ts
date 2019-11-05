@@ -19,7 +19,7 @@ export class DepartmentService {
   private departmentUrl = 'http://localhost:8080/department';
   
     
-    getDepartments():Observable<Department[]>
+    getDepartment():Observable<Department[]>
     {
       //return of (USERS);
       const url="http://localhost:8080/department/show";
@@ -39,7 +39,7 @@ export class DepartmentService {
       //.pipe(tap(User=>this.log("fetched users")),catchError(this.handleError('getUsers', [])));
     }
     
-
+    addDepartment(department:Department):Observable<Department>
     addDepartment(department:Department):Observable<Department>
     {
         const url="http://localhost:8080/department/add";

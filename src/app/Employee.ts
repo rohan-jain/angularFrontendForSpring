@@ -1,3 +1,5 @@
+import { Department } from './Department';
+
 export class Employee
 {
     id:number;
@@ -6,6 +8,5 @@ export class Employee
     salary:number;
     hours:number;
     rate:number;
-    skills:string;
-
+    department:Department;
 }

@@ -1,0 +1,63 @@
+
+<div class="container-fluid">
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <table *ngIf="emp!=null" align="center">
+                    <tr>
+                            <td>Employee Id</td>
+                            <td><input type="text" placeholder="Enter Emoloyee Mobile" [(ngModel)]="emp.id"/></td>
+                          </tr>
+                      
+                          <tr>
+                        <td>Mobile</td>
+                            <td><input type="text" placeholder="Enter Emoloyee Mobile" [(ngModel)]="emp.mobile"/></td>
+                          </tr>
+                          <tr>
+                            <td>Employee Name</td>
+                            <td><input type="text" placeholder="Enter Employee Name" [(ngModel)]="emp.name"/></td>
+                          </tr>
+                      
+                          <tr>
+                              <td>Department Name</td>
+                              <td><input type="text" placeholder="Enter Department Name" [(ngModel)]="dept.departmentName"/></td>
+                          </tr>
+                      
+                          <tr>
+                              <td>Department Id</td>
+                              <td><input type="text" placeholder="Enter Department Id" [(ngModel)]="dept.departmentId"/></td>
+                          </tr>
+                      
+                          <tr>
+                            <td><input type="submit" value="Update Employee" id="tbbtn1"  ></td>
+                            <td><input type="submit" value="Cancel" id="tbbtn2" (click)="cancelEdit()" ></td>
+                          </tr>
+                        
+            </table>
+        <table  *ngIf="employees!=null" class="table table-striped table-bordered">
+                <tr>
+                    <th> Employeeid </th>
+                    <th> Employeesalary </th>
+                    <th> Employeename </th>
+                    <th> Employeemobile </th>
+                    <th> Employeerate </th>
+                    <th> Employeehours </th>
+                    <th> Employeedepartment Name</th>
+                    <th> Employeedepartment Id</th>
+                </tr>
+                <tr *ngFor="let e of employees">
+                    <td> {{e.id}} </td>
+                    <td> {{e.name}} </td>
+                    <td> {{e.mobile}} </td>
+                    <td> {{e.salary}} </td>
+                    <td> {{e.hours}} </td>
+                    <td> {{e.rate}} </td>
+                    <td> {{e.department.departmentId}} </td>
+                    <td> {{e.department.departmentName}} </td>
+                  <!-- <td *ngIf="(u.role=='hr' && role=='hr') || (role=='employee' && u.username!=username)"><input type="submit" *ngIf="username==u.username" (click)="onEdit(u)" value="Edit"><input type="submit" (click)="onView(u)" value="View"></td>
+                  <td *ngIf="(u.role!='hr' &&  role=='hr') || (username==u.username && role!='hr')"><input type="submit" (click)="onEdit(u)" value="Edit"><input type="submit" (click)="onDelete(u)" value="Delete"><input type="submit" (click)="onView(u)" value="View"></td>
+                  <td *ngIf="(u.role=='tech mentor' &&  role=='employee')"><input type="submit" (click)="assignProject(u)" value="Assign Project"></td> -->
+                    <input type="submit" (click)="searchEmployee(e.id)" class="btn btn-primary btn-block" value="Edit">
+                    <input type="submit" (click)="deleteEmployee(e)" class="btn btn-success btn-block" value="Delete"/>
+                </tr>      
+            </table>
+        </div>
+</div>

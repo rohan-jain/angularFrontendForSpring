@@ -1,3 +1,5 @@
+import { Employee } from './Employee'
+
 export class Department 
 {
     departmentId:number;

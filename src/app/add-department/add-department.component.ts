@@ -16,7 +16,13 @@ export class AddDepartmentComponent implements OnInit
       departmentName:""
   }
   
-  constructor(private departmentSerive:DepartmentService) { }
+  addDepartment(department:Department):void
+  {
+      this.departmentService.addDepartment(department).subscribe();
+      alert("Department Added Successfully!!!");
+  }
+
+  constructor(private departmentService:DepartmentService) { }
 
   ngOnInit() {
   }

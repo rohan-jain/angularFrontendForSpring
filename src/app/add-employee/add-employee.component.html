@@ -1,0 +1,30 @@
+<p>add-employee works!</p>
+
+
+<div >
+    <h2>Add Employee</h2>
+  <table>
+    <tr>
+      <td>Mobile</td>
+      <td><input type="text" placeholder="Enter Emoloyee Mobile" [(ngModel)]="employee.mobile"/></td>
+    </tr>
+    <tr>
+      <td>Employee Name</td>
+      <td><input type="text" placeholder="Enter Employee Name" [(ngModel)]="employee.name"/></td>
+    </tr>
+
+    <tr>
+        <td>Department Name</td>
+        <td><input type="text" placeholder="Enter Department Name" [(ngModel)]="department.departmentName"/></td>
+    </tr>
+
+    <tr>
+        <td>Department Id</td>
+        <td><input type="text" placeholder="Enter Department Id" [(ngModel)]="department.departmentId"/></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><input type="submit" value="Add Employee" id="tbbtn"  (click)="addEmployee(employee,department)"></td>
+    </tr>
+  </table>
+  </div>
